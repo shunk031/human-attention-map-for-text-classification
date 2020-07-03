@@ -12,7 +12,7 @@ Reimplementation of the paper [Human Attention Maps for Text Classification: Do 
 
 ### Split the dataset
 - The Yelp dataset is so large that it is divided into subsets in advance.
-  - After that, we can get `tng.jsonl`, `val.jsonl`, and `tst.jsonl' from `data` directory.
+  - After that, we can get `tng.jsonl`, `val.jsonl`, and `tst.jsonl` from `data` directory.
 
 ```sh
 $ allennlp split-dataset \
