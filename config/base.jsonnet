@@ -6,6 +6,7 @@ local tst_data_path = 'data/tst.jsonl';
 local dataset_reader = {
     "type": "yelp",
     "lazy": true,
+    "manual_multi_process_sharding": true,
 };
 
 local model = {
@@ -35,7 +36,7 @@ local model = {
 
 local data_loader = {
     "batch_size" : 64,
-    // "num_workers": 4,
+    "num_workers": 4,
 };
 
 local trainer = {

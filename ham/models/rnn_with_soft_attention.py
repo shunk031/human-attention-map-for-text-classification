@@ -50,10 +50,8 @@ class RNNModel(Model):
         if label is not None:
             output_dict["loss"] = self._loss(logit, label)
 
-            one_minus_logit = 1 - logit
-            probs = torch.stack((one_minus_logit, logit), dim=-1)
             for eval_metric in self._metrics.values():
-                eval_metric(probs, label)
+                eval_metric(logit, label)
 
         return output_dict
 
