@@ -4,5 +4,6 @@
 # contents of .allennlp_plugins makes it so you can just use `allennlp train`, and we will find your
 # classes and use them.  If you change the name of `ham`, you'll also need to change it in
 # the same way in the .allennlp_plugins file.
+from ham.commands import *  # noqa
 from ham.data.dataset_readers import *  # noqa
 from ham.models import *  # noqa

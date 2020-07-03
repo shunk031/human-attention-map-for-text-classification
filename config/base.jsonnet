@@ -1,8 +1,11 @@
 local seed = 19950815;
+local tng_data_path = 'data/tng.jsonl';
+local val_data_path = 'data/val.jsonl';
+local tst_data_path = 'data/tst.jsonl';
 
 local dataset_reader = {
     "type": "yelp",
-    "dataset_path": "data/yelp_academic_dataset_review.json",
+    "lazy": true,
 };
 
 local model = {
@@ -31,11 +34,8 @@ local model = {
 };
 
 local data_loader = {
-    "batch_sampler": {
-        "type": "bucket",
-        "batch_size" : 32,
-    },
-    "num_workers": 4,
+    "batch_size" : 64,
+    // "num_workers": 4,
 };
 
 local trainer = {
@@ -49,16 +49,22 @@ local trainer = {
     }
 };
 
+local vocabulary = {
+    "type": "from_files",
+    "directory": "data/vocabulary"
+};
+
 {
     "random_seed": seed,
     "numpy_seed": seed,
     "pytorch_seed": seed,
     "dataset_reader": dataset_reader,
-    "train_data_path": "tng",
-    "validation_data_path": "val",
-    "test_data_path": "tst",
+    "train_data_path": tng_data_path,
+    "validation_data_path": val_data_path,
+    "test_data_path": tst_data_path,
     "evaluate_on_test": true,
     "model": model,
     "data_loader": data_loader,
     "trainer": trainer,
+    "vocabulary": vocabulary,
 }

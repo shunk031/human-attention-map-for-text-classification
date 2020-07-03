@@ -2,7 +2,10 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 *.json
+*.jsonl
 *.csv
+
+outputs/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
