@@ -39,15 +39,17 @@ local data_loader = {
     "num_workers": 4,
 };
 
+local optimzier = {
+    "type": "adam",
+    "lr": 0.001
+};
+
 local trainer = {
     "num_epochs": 5,
     "patience": 1,
     "validation_metric": "+acc1",
     "cuda_device": -1,
-    "optimizer": {
-        "type": "adam",
-        "lr": 0.001
-    }
+    "optimizer": optimizer,
 };
 
 local vocabulary = {
