@@ -23,6 +23,14 @@ $ allennlp split-dataset \
     --tst_ratio 0.1
 ```
 
+### Preprocess HAM dataset
+
+```sh
+$ allennlp preprocess-ham-dataset \
+    --ham-dataset-dir data/ham-dataset/raw_data/ \
+    --output-dir data/
+```
+
 ## Install requirements
 
 ```sh
