@@ -6,6 +6,12 @@
 
 Re-implementation of the paper [Human Attention Maps for Text Classification: Do Humans and Neural Networks Focus on the Same Words?](https://www.aclweb.org/anthology/2020.acl-main.419/) (ACL2020).
 
+## Install requirements
+
+```sh
+$ poetry install
+```
+
 ## Download and Split Yelp dataset
 ### Download from Yelp.com
 - https://www.yelp.com/dataset/download
@@ -29,12 +35,6 @@ $ allennlp split-dataset \
 $ allennlp preprocess-ham-dataset \
     --ham-dataset-dir data/ham-dataset/raw_data/ \
     --output-dir data/
-```
-
-## Install requirements
-
-```sh
-$ poetry install
 ```
 
 ## Train RNN model
